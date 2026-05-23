@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#1b1b1b",
+                    "primary": "#010101",
+                    "on-tertiary-fixed-variant": "#484643",
+                    "secondary-container": "#fe702c",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e4e2e2",
+                    "surface-dim": "#dbd9d9",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#474746",
+                    "secondary": "#a53c00",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#e6e2dd",
+                    "inverse-primary": "#c8c6c5",
+                    "background": "#fbf9f8",
+                    "tertiary": "#010101",
+                    "on-surface": "#1b1c1c",
+                    "outline": "#747878",
+                    "surface-container-low": "#f5f3f3",
+                    "primary-container": "#1c1c1c",
+                    "on-background": "#1b1c1c",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb598",
+                    "outline-variant": "#c4c7c7",
+                    "secondary-fixed": "#ffdbce",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-tertiary-fixed": "#1d1b19",
+                    "on-primary-container": "#858484",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface": "#fbf9f8",
+                    "inverse-surface": "#303030",
+                    "surface-bright": "#fbf9f8",
+                    "on-tertiary-container": "#878480",
+                    "on-secondary-fixed": "#370e00",
+                    "on-secondary-fixed-variant": "#7e2c00",
+                    "on-surface-variant": "#444748",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#eae8e7",
+                    "surface-tint": "#5f5e5e",
+                    "on-secondary-container": "#5d1e00",
+                    "tertiary-fixed-dim": "#cac6c1",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#efeded",
+                    "tertiary-container": "#1d1c19",
+                    "primary-fixed": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "stack-md": "32px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "stack-sm": "16px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Playfair Display"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.textured-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBBUUmh_e-SA2sTvitO8gJpc1f7ZzkxYrTBFqQVHgM-MIy-lUvzO0y3TUlzKx-g4a-gSnRi5Bogjl9TAv7zR6DHzAhtdnttDCWBuNSDF5hpTlgKzEKetFtIBTjWPXtLkYDwRPfzr7VfMuks-hrUcZqYe5yUB-Hbey7qf_41Ec764O8E9eRVF_jcXh4Vkj4oILMu7iOQX-E245CAX8ADmwCVjN5CrcANFvXHfM_Juizwjk19Lh16TFdMG2ryZCiXFpLRAmES9qJ59eqk);
+    background-repeat: repeat
+    }
+.hard-shadow {
+    box-shadow: 6px 6px 0 0 rgba(1, 1, 1, 0.15)
+    }
+.card-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 0 rgba(165, 60, 0, 0.2)
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md textured-bg selection:bg-secondary-fixed">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-5 md:px-margin-desktop max-w-container-max mx-auto py-4 bg-background border-b-2 border-primary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="construction">construction</span>
+<span class="font-headline-md text-headline-md font-bold text-secondary">PC</span>
+</div>
+<nav class="hidden md:flex items-center gap-stack-md">
+<a class="text-on-background font-label-md text-label-md hover:text-secondary-fixed transition-colors duration-200" href="#">Home</a>
+<a class="text-on-background font-label-md text-label-md hover:text-secondary-fixed transition-colors duration-200" href="#">Sobre Nós</a>
+<a class="text-secondary border-b-2 border-secondary font-label-md text-label-md translate-y-0.5 transition-all" href="#">Serviços</a>
+<a class="text-on-background font-label-md text-label-md hover:text-secondary-fixed transition-colors duration-200" href="#">Portfólio</a>
+<a class="text-on-background font-label-md text-label-md hover:text-secondary-fixed transition-colors duration-200" href="#">Contacto</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-md text-label-md uppercase tracking-wider hover:bg-secondary transition-all hard-shadow active:translate-y-1">
+            Orçamento
+        </button>
+</header>
+<main class="max-w-container-max mx-auto px-5 md:px-margin-desktop py-stack-lg">
+<!-- Hero Section -->
+<section class="mb-stack-lg">
+<div class="flex flex-col md:flex-row items-end justify-between gap-gutter border-b-2 border-primary pb-stack-sm">
+<div class="max-w-2xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-tight">
+                        Os Nossos Serviços
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Combinamos precisão arquitetónica com mestria artesanal para entregar resultados que resistem ao tempo e elevam o seu espaço.
+                    </p>
+</div>
+<div class="hidden md:block">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em]">Craftsmanship</span>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover transition-all duration-300">
+<div class="w-12 h-12 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="format_paint">format_paint</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Pintura Interior</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    Acabamentos premium com tintas de alta qualidade, garantindo durabilidade e uma estética refinada para cada divisão da sua casa.
+                </p>
+<a class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">
+                    SABER MAIS 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover transition-all duration-300">
+<div class="w-12 h-12 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="imagesearch_roller">imagesearch_roller</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Pintura Exterior</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    Proteção e revitalização de fachadas contra as intempéries, utilizando membranas elásticas e revestimentos térmicos avançados.
+                </p>
+<a class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">
+                    SABER MAIS 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover transition-all duration-300">
+<div class="w-12 h-12 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="foundation">foundation</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Construção e Remodelação</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    Do conceito à execução, transformamos estruturas com rigor técnico e materiais nobres para criar espaços modernos e funcionais.
+                </p>
+<a class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">
+                    SABER MAIS 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Service 4 -->
+<div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover transition-all duration-300">
+<div class="w-12 h-12 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="water_drop">water_drop</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Impermeabilização</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    Soluções definitivas contra infiltrações e humidade em terraços, coberturas e caves com garantia de selagem total.
+                </p>
+<a class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">
+                    SABER MAIS 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Service 5 -->
+<div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover transition-all duration-300">
+<div class="w-12 h-12 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Acabamentos e Estuques</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    Nivelamento perfeito de superfícies e aplicação de estuques decorativos para um toque de sofisticação e suavidade.
+                </p>
+<a class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">
+                    SABER MAIS 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Service 6 -->
+<div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover transition-all duration-300">
+<div class="w-12 h-12 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="build">build</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Pequenas Obras e Reparações</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    Manutenção geral e intervenções rápidas com a mesma qualidade e atenção ao detalhe das nossas grandes obras.
+                </p>
+<a class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">
+                    SABER MAIS 
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="mt-stack-lg relative overflow-hidden bg-primary p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-gutter">
+<!-- Texture Overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none textured-bg"></div>
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md text-white mb-2">Precisa de um serviço personalizado?</h2>
+<p class="font-body-lg text-body-lg text-surface-variant">Fale connosco para soluções à medida do seu projeto.</p>
+</div>
+<button class="relative z-10 bg-secondary text-white px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300 border-2 border-transparent hover:border-primary active:scale-95">
+                Contactar Agora
+            </button>
+</section>
+<!-- Visual Credibility Section -->
+<section class="mt-stack-lg grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="relative aspect-video border-2 border-primary overflow-hidden">
+<img alt="Trabalhador de construção" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional construction worker in high-visibility gear carefully applying plaster to a textured interior wall. The setting is a bright, modern architectural space under renovation, with natural sunlight streaming through large windows. The lighting is crisp and detailed, highlighting the rugged materials and the precision of the work. The color palette is dominated by warm whites and deep charcoals, punctuated by the orange of the safety vest." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmIwX5O3Vyfle9-x9gR5QUYJYXLevPSTkfaXIYGeOYkceiE4tshhXwzJ0e5gtNGalTiAZuTSsra2o2BDbA8qA3w0uLihLHpLrJ2Gx2rLpKcYzySDVDBXVVovN7-ULWG9j9jB8GZVVOU7ypHeT-HG0VkqzVSY-JpXbrlnMMtxC1Zl4qauZN2YlprYBShzwY465_UGjs9OjD42x78lftr7PcfNof_sdfFKwrQ8-kWsmaECZGsFVaEKVjidefFlGbOXrLVbMuJ7d-aXin"/>
+</div>
+<div class="bg-surface-container-high p-8 flex flex-col justify-center border-2 border-primary">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest mb-4">Garantia de Qualidade</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Excelência em cada pincelada, rigor em cada tijolo.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    A Pinta Constrói não entrega apenas serviços; entrega tranquilidade. O nosso processo rigoroso garante que cada projeto, independentemente da escala, seja concluído com os mais elevados padrões da indústria portuguesa.
+                </p>
+<div class="flex gap-stack-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">15+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Anos de Experiência</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">500+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Obras Concluídas</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-5 md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary border-t-4 border-secondary text-on-primary">
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm text-secondary">Pinta Constrói</span>
+<p class="font-body-md text-body-md max-w-xs opacity-70">Elevando padrões na construção e pintura civil em todo o território nacional.</p>
+<span class="font-label-sm text-label-sm mt-4 opacity-50">© 2026 Pinta Constrói</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-stack-md">
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-white mb-2">Navegação</span>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm text-secondary transition-colors" href="#">Serviços</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Portfólio</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-white mb-2">Empresa</span>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Sobre Nós</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Contacto</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Carreiras</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-white mb-2">Social</span>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Facebook</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+<div class="flex flex-col gap-4 bg-primary-container p-6 border border-outline-variant">
+<span class="font-label-md text-label-md text-white">Subscreva a Newsletter</span>
+<div class="flex">
+<input class="bg-transparent border-b-2 border-outline focus:border-secondary outline-none px-2 py-1 font-body-md text-white w-full" placeholder="O seu email" type="email"/>
+<button class="ml-2 text-secondary hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for top app bar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Interactive card feedback
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'translate(2px, 2px)';
+                card.style.boxShadow = 'none';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'translate(-2px, -2px)';
+                card.style.boxShadow = '8px 8px 0px 0px rgba(165, 60, 0, 0.2)';
+            });
+        });
+    </script>
+</body></html>

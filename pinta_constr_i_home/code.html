@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pinta Constrói | Construção e Pintura Profissional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#1b1b1b",
+                        "primary": "#010101",
+                        "on-tertiary-fixed-variant": "#484643",
+                        "secondary-container": "#fe702c",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e4e2e2",
+                        "surface-dim": "#dbd9d9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#474746",
+                        "secondary": "#a53c00",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e6e2dd",
+                        "inverse-primary": "#c8c6c5",
+                        "background": "#fbf9f8",
+                        "tertiary": "#010101",
+                        "on-surface": "#1b1c1c",
+                        "outline": "#747878",
+                        "surface-container-low": "#f5f3f3",
+                        "primary-container": "#1c1c1c",
+                        "on-background": "#1b1c1c",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#ffb598",
+                        "outline-variant": "#c4c7c7",
+                        "secondary-fixed": "#ffdbce",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-tertiary-fixed": "#1d1b19",
+                        "on-primary-container": "#858484",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface": "#fbf9f8",
+                        "inverse-surface": "#303030",
+                        "surface-bright": "#fbf9f8",
+                        "on-tertiary-container": "#878480",
+                        "on-secondary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#7e2c00",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#eae8e7",
+                        "surface-tint": "#5f5e5e",
+                        "on-secondary-container": "#5d1e00",
+                        "tertiary-fixed-dim": "#cac6c1",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#efeded",
+                        "tertiary-container": "#1d1c19",
+                        "primary-fixed": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-md": "32px",
+                        "stack-lg": "48px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "stack-sm": "16px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDeZfCJ9CjZyR1iGQp7d31oU6d3eiW8KnVUvjErzhhelJfhM5tSbWOM7BzA68wi41SkoTeqHyMFmSSb24C4Yn507NrHkmek2EWnCx7ceeymVTnr4w4mvHXJw_LufdoWKA-rJm6X5vhorFSxVgCcCv5PwtUffzRv8azX0hkcuDXVltY3P_nGXtsTdEmrZ8oIrcRTEapZCSFskvcfrYlB4BKyY44hMXzQXDj6QXtdX93MoLkb4pj5KRiPyjVCZk-wvwZlObsXbuvWcbFj);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.reveal {
+    opacity: 0;
+    transform: translatey(20px);
+    transition: all 0.8s ease-out
+    }
+.reveal.active {
+    opacity: 1;
+    transform: translatey(0)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background selection:bg-secondary-container selection:text-white">
+<div class="fixed inset-0 grain-overlay z-[9999]"></div>
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-4 bg-background border-b-2 border-primary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">construction</span>
+<span class="font-headline-md text-headline-md font-bold text-secondary">PC</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary border-b-2 border-secondary font-label-md text-label-md transition-all translate-y-0.5" href="#">Home</a>
+<a class="text-on-background font-label-md text-label-md hover:text-secondary-fixed transition-colors duration-200" href="#">Sobre Nós</a>
+<a class="text-on-background font-label-md text-label-md hover:text-secondary-fixed transition-colors duration-200" href="#">Serviços</a>
+<a class="text-on-background font-label-md text-label-md hover:text-secondary-fixed transition-colors duration-200" href="#">Portfólio</a>
+<a class="text-on-background font-label-md text-label-md hover:text-secondary-fixed transition-colors duration-200" href="#">Contacto</a>
+</div>
+<button class="bg-secondary text-white px-6 py-2 font-label-md text-label-md hover:bg-secondary-container transition-all active:translate-y-0.5">
+            Orçamento
+        </button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[795px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Modern Construction" class="w-full h-full object-cover brightness-[0.4]" data-alt="A cinematic, wide-angle shot of a sophisticated modern architectural construction site at dusk. The scene features clean concrete lines, structural steel beams, and warm orange lighting reflecting off polished surfaces. The overall aesthetic is professional and rugged, utilizing a high-contrast palette of deep blacks and warm whites to convey structural integrity and craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgZF4AOAvqYjNKCagkhh87GhxyfUicze3U0eEEHIyDx5WqY4EGPU9DmxEsRLt0aEK0fGu6Ed3tKfTgo7xjM-0-Fz4jM0No8SZSvhQi3s-mr406d0PyuYia4G_DMafrxXCtnmFVMnwwrPG7p-gXnkFawGN0CfmTqCpnnPbHGRaA6soTyEGVkBffXGXDLITVqUA2ESMxi6jS_9GGhmj5lDCuBx-YYA7qqyrZFqnTsN-uG6nMzWgtOsaJR0G6T4mzSZ5BLwzVzOI3GdN4"/>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-3xl reveal" id="hero-content">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">
+                        Construímos.<br/>Pintamos.<br/>Transformamos.
+                    </h1>
+<p class="font-body-lg text-body-lg text-surface-variant mb-10 max-w-xl">
+                        Mais de 10 anos de experiência ao seu serviço. Excelência técnica e acabamentos premium para o seu projeto.
+                    </p>
+<button class="bg-secondary-container text-white px-10 py-5 font-label-md text-label-md uppercase tracking-widest hover:bg-secondary transition-all flex items-center gap-3">
+                        Peça um Orçamento Gratuito
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Pillars Section -->
+<section class="bg-background py-stack-lg border-b border-outline-variant">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="flex flex-col items-center text-center p-stack-md border border-outline-variant reveal">
+<span class="material-symbols-outlined text-5xl text-primary mb-4">verified</span>
+<h3 class="font-headline-sm text-headline-sm mb-2">Qualidade</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Materiais de primeira linha e técnicas de vanguarda em cada detalhe.</p>
+</div>
+<div class="flex flex-col items-center text-center p-stack-md border border-outline-variant reveal">
+<span class="material-symbols-outlined text-5xl text-primary mb-4">schedule</span>
+<h3 class="font-headline-sm text-headline-sm mb-2">Pontualidade</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Cumprimento rigoroso de prazos, respeitando o seu tempo e planeamento.</p>
+</div>
+<div class="flex flex-col items-center text-center p-stack-md border border-outline-variant reveal">
+<span class="material-symbols-outlined text-5xl text-primary mb-4">handshake</span>
+<h3 class="font-headline-sm text-headline-sm mb-2">Confiança</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Transparência total e acompanhamento técnico em todas as fases.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-stack-lg">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-stack-md">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Portfólio</span>
+<h2 class="font-headline-lg text-headline-lg">Projetos em Destaque</h2>
+</div>
+<a class="font-label-md text-label-md text-primary flex items-center gap-1 hover:text-secondary transition-colors" href="#">
+                        Ver Todos <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Project Card 1 -->
+<div class="group relative aspect-[3/4] overflow-hidden border-2 border-primary reveal">
+<img alt="Villa Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up shot of a luxury minimalist villa exterior featuring crisp white plastered walls and architectural lighting. The lighting creates sharp shadows on the clean surfaces, emphasizing the high-quality finish and artisanal painting. The mood is sophisticated and expensive, reflecting a modern light-mode design with deep charcoal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiY1RKYad13s1OA4NCeEadwFlyOGaWFvy5miSWYweCCTtZhpy5W_bnx-s2DVBiMf6EQ9_PRsd90TJXgbbENE0CWF7YsNokX1zoQNL04GKsbw1w4F7hl2Ci5kr7HrKy4burQPMpCvXCX8IGEJspQEeMXR2M1eMJ9QsVAVTYdPSf0dXenp9WEPswWKn6W3BDqyK5fjVxuyerplZDKWlZ6vSadZWzg63ft7SB8HjYGp_JkfPQ_EA2Fnj_E3jUGc9SRWK-Q72iSHTLA6i0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-secondary-fixed mb-2">Pintura de Luxo</span>
+<h4 class="font-headline-sm text-headline-sm text-white">Vivenda Quinta da Marinha</h4>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group relative aspect-[3/4] overflow-hidden border-2 border-primary reveal">
+<img alt="Office Reno" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An interior shot of a corporate office renovation with exposed industrial elements and professional painting finishes. The space is bright and airy, with polished concrete floors and dark steel beams contrasting against warm white walls. The image highlights structural integrity and modern office design with a rugged yet refined aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsvAB19EJVOcq-5l4ZD9AsfsqBLsNm5_SMUa8Wduk0XEuVULtXxP99e18QlKsLuQL4M4tJ_--czoyRAUfUkPTr2OrRDOWcybD0t631EYBAKwTMVrtipzl7U-lIfdb9xenA8plVOHce2Y4TO3z0m0sbnYQ7jAEmJvLVj1NeGTxB7GDh7b4bo6jL0DF-VWkcFilvW0KqU_tMS9RIF6YrKKEkGGNtQqmM5G1bEatRQy67kIpbZZtTENqcaV9e84Vs0e7KdEvsU06aaw6H"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-secondary-fixed mb-2">Remodelação</span>
+<h4 class="font-headline-sm text-headline-sm text-white">Escritórios Tech Hub</h4>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group relative aspect-[3/4] overflow-hidden border-2 border-primary reveal">
+<img alt="Facade Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An architectural detail of a modern residential balcony with glass railings and wood cladding. The craftsmanship of the timber joinery and the precision of the structure are evident under the bright daylight. The scene communicates a sense of permanence and professional construction, consistent with a high-end architectural firm identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnU11SkDD1qlCrszTXCxGIxGjAVaqKZgqeuoc8fRzg4ZqA2y2V3Qg6hJWxBVNeVfU11pNdTxNs1DFhV0_9Ea5TocZ6Qn3NhKGJajyRHWvqgnc1j7s9p3ykhnXzcZGk3g82geudj8tiynnwEgUWRPjTYGJ6qFs0oGfa8rFq93ROg9lPLsKADmrdkdQ0MHo9HNM1X2MmX2vdoSTPKAnEGX4ciEZfEjd9O364Lwx3JYJ8IkN_S_UIzw_QM1QlZWIAxOHxYfyUYzkWUKE7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-secondary-fixed mb-2">Construção Civil</span>
+<h4 class="font-headline-sm text-headline-sm text-white">Fachada Residencial Belém</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Teaser -->
+<section class="bg-primary py-stack-lg text-on-primary">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="reveal">
+<h2 class="font-headline-lg text-headline-lg mb-6">Mãos que moldam<br/>o futuro.</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8">
+                            A Pinta Constrói nasceu da paixão pelo rigor construtivo e pela arte do acabamento. Em cada projeto, entregamos não apenas uma obra, mas um legado de durabilidade e estética refinada.
+                        </p>
+<a class="inline-flex items-center gap-2 border-b-2 border-secondary pb-1 font-label-md text-label-md text-secondary hover:text-white hover:border-white transition-all" href="#">
+                            Saiba mais sobre a nossa história
+                            <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+<div class="relative reveal">
+<div class="absolute -top-4 -left-4 w-full h-full border-2 border-secondary z-0"></div>
+<img alt="Craftsmanship" class="relative z-10 w-full h-[400px] object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-500" data-alt="A macro shot focusing on the hands of a craftsman using a professional tool on a textured wall surface. The lighting is dramatic, catching the dust particles and the raw texture of the materials. The image evokes a sense of artisanal expertise and deliberate execution, staying within a monochromatic and burnt orange color theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsylzkjOIUw_XIIeoNeLLxapcGCu1T9Ukdz3sXNL9pijV5ILkB88IgiwCYBb9TJMKHWgPvziu002EBslHbJY-RJ70XtshTLypBcmYeTdEnVxNfdAACY87APNEwwEoQkpPii4BCC_ql__AmLS27L6e_i1YStA9lu1ft4N4p3lx4vDBz2Z-YnNQ--r0aabhKdOo8WfX7P-57nOKco7fuNpH8zAmCRjU8WAQ4TuRAFR7BsG7XBkj3SJhFoJnbFS5QdXcgbWUIjGaAaNpQ"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary border-t-4 border-secondary text-on-primary">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-3xl">construction</span>
+<span class="font-headline-sm text-headline-sm text-secondary">Pinta Constrói</span>
+</div>
+<p class="font-body-md text-body-md text-surface-variant max-w-xs">
+                Arquitetura de precisão e acabamentos de mestre em Portugal.
+            </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-stack-md">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2">Links</span>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Sobre Nós</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Serviços</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2">Legal</span>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Portfólio</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Privacidade</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-2">Social</span>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2 w-full md:w-auto mt-6 md:mt-0">
+<span class="font-label-sm text-label-sm text-surface-variant">© 2026 Pinta Constrói</span>
+<span class="font-label-sm text-label-sm text-surface-variant">Lisboa, Portugal</span>
+</div>
+</footer>
+<script>
+        // Reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Initial trigger for hero
+        window.addEventListener('load', () => {
+            document.getElementById('hero-content').classList.add('active');
+        });
+    </script>
+</body></html>

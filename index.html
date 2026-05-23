@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pinta Constrói | Construção e Pintura Profissional | Paulo Cardoso</title>
+<meta name="description" content="Mais de 10 anos de excelência em construção civil e pintura decorativa em Portugal. Peça o seu orçamento gratuito hoje."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-primary-fixed": "#1b1b1b",
+          "primary": "#010101",
+          "on-tertiary-fixed-variant": "#484643",
+          "secondary-container": "#fe702c",
+          "error": "#ba1a1a",
+          "surface-variant": "#e4e2e2",
+          "surface-dim": "#dbd9d9",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#474746",
+          "secondary": "#a53c00",
+          "error-container": "#ffdad6",
+          "tertiary-fixed": "#e6e2dd",
+          "inverse-primary": "#c8c6c5",
+          "background": "#fbf9f8",
+          "tertiary": "#010101",
+          "on-surface": "#1b1c1c",
+          "outline": "#747878",
+          "surface-container-low": "#f5f3f3",
+          "primary-container": "#1c1c1c",
+          "on-background": "#1b1c1c",
+          "surface-container-highest": "#e4e2e2",
+          "on-error-container": "#93000a",
+          "secondary-fixed-dim": "#ffb598",
+          "outline-variant": "#c4c7c7",
+          "secondary-fixed": "#ffdbce",
+          "inverse-on-surface": "#f2f0f0",
+          "on-tertiary-fixed": "#1d1b19",
+          "on-primary-container": "#858484",
+          "on-error": "#ffffff",
+          "primary-fixed-dim": "#c8c6c5",
+          "surface": "#fbf9f8",
+          "inverse-surface": "#303030",
+          "surface-bright": "#fbf9f8",
+          "on-tertiary-container": "#878480",
+          "on-secondary-fixed": "#370e00",
+          "on-secondary-fixed-variant": "#7e2c00",
+          "on-surface-variant": "#444748",
+          "on-tertiary": "#ffffff",
+          "surface-container-high": "#eae8e7",
+          "surface-tint": "#5f5e5e",
+          "on-secondary-container": "#5d1e00",
+          "tertiary-fixed-dim": "#cac6c1",
+          "on-primary": "#ffffff",
+          "surface-container": "#efeded",
+          "tertiary-container": "#1d1c19",
+          "primary-fixed": "#e5e2e1"
+        },
+        spacing: {
+          "margin-desktop": "64px",
+          "stack-md": "32px",
+          "stack-lg": "48px",
+          "container-max": "1280px",
+          "base": "8px",
+          "gutter": "24px",
+          "stack-sm": "16px",
+          "margin-mobile": "20px"
+        },
+        fontFamily: {
+          "label-md": ["Inter"],
+          "headline-md": ["Playfair Display"],
+          "body-lg": ["Inter"],
+          "body-md": ["Inter"],
+          "headline-sm": ["Playfair Display"],
+          "label-sm": ["Inter"],
+          "headline-lg": ["Playfair Display"],
+          "display-lg": ["Playfair Display"],
+          "display-lg-mobile": ["Playfair Display"]
+        },
+        fontSize: {
+          "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+          "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+          "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+          "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+          "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+          "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+          "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    background-color: #fbf9f8;
+    min-height: 100dvh;
+    font-family: 'Inter', sans-serif;
+    color: #1b1c1c;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+
+  /* Grain overlay */
+  .grain-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+  }
+
+  /* Hard shadow */
+  .hard-shadow {
+    box-shadow: 6px 6px 0 0 rgba(1, 1, 1, 0.15);
+  }
+  .hard-shadow-hover {
+    transition: all 0.2s ease;
+  }
+  .hard-shadow-hover:hover {
+    box-shadow: 8px 8px 0 0 rgba(165, 60, 0, 0.2);
+    transform: translate(-2px, -2px);
+  }
+
+  /* Card hover */
+  .card-hover {
+    transition: all 0.2s ease;
+  }
+  .card-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 0 rgba(165, 60, 0, 0.2);
+  }
+  .card-hover:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
+  /* Page transitions */
+  .page {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+  }
+  .page.active {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.7s ease-out;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Mobile menu */
+  #mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #010101;
+    z-index: 200;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  #mobile-menu.open {
+    display: flex;
+    animation: fadeIn 0.25s ease;
+  }
+
+  /* FAQ accordion */
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+  }
+  .faq-item.active .faq-content {
+    max-height: 240px;
+  }
+  .faq-item.active .faq-icon {
+    transform: rotate(45deg);
+  }
+  .faq-icon {
+    transition: transform 0.25s ease;
+  }
+
+  /* Portfolio filter */
+  .project-card[data-hidden="true"] {
+    display: none;
+  }
+
+  /* Form success toast */
+  #form-toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #a53c00;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 9999;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  #form-toast.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Scroll progress bar */
+  #scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #a53c00;
+    z-index: 9999;
+    transition: width 0.1s ease;
+  }
+
+  /* WhatsApp float button */
+  #whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 500;
+    background: #25D366;
+    color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+  }
+  #whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  #whatsapp-btn svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+  }
+
+  /* Smooth scroll */
+  html { scroll-behavior: smooth; }
+
+  /* Texture bg */
+  .textured-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+
+  /* Back to top */
+  #back-to-top {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    background: #010101;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+  #back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #back-to-top:hover {
+    background: #a53c00;
+  }
+</style>
+</head>
+<body class="bg-background text-on-background">
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Grain Overlay -->
+<div class="grain-overlay fixed inset-0 z-[9998] pointer-events-none"></div>
+
+<!-- WhatsApp Float Button -->
+<a id="whatsapp-btn" href="https://wa.me/351968379913" target="_blank" rel="noopener noreferrer" title="Contactar via WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- Back to Top -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">
+  <span class="material-symbols-outlined text-xl">arrow_upward</span>
+</button>
+
+<!-- Form Toast -->
+<div id="form-toast">✓ Mensagem enviada! Entraremos em contacto brevemente.</div>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu">
+  <button id="mobile-menu-close" class="absolute top-6 right-6 text-white" onclick="closeMobileMenu()">
+    <span class="material-symbols-outlined text-4xl">close</span>
+  </button>
+  <a onclick="navigate('home'); closeMobileMenu();" class="font-display-lg-mobile text-display-lg-mobile text-white cursor-pointer hover:text-secondary transition-colors" id="mob-nav-home">Home</a>
+  <a onclick="navigate('sobre'); closeMobileMenu();" class="font-display-lg-mobile text-display-lg-mobile text-white cursor-pointer hover:text-secondary transition-colors" id="mob-nav-sobre">Sobre Nós</a>
+  <a onclick="navigate('servicos'); closeMobileMenu();" class="font-display-lg-mobile text-display-lg-mobile text-white cursor-pointer hover:text-secondary transition-colors" id="mob-nav-servicos">Serviços</a>
+  <a onclick="navigate('portfolio'); closeMobileMenu();" class="font-display-lg-mobile text-display-lg-mobile text-white cursor-pointer hover:text-secondary transition-colors" id="mob-nav-portfolio">Portfólio</a>
+  <a onclick="navigate('contacto'); closeMobileMenu();" class="font-display-lg-mobile text-display-lg-mobile text-white cursor-pointer hover:text-secondary transition-colors" id="mob-nav-contacto">Contacto</a>
+  <a href="tel:+351968379913" class="mt-4 bg-secondary text-white px-8 py-3 font-label-md text-label-md uppercase tracking-widest">
+    +351 968 379 913
+  </a>
+</div>
+
+<!-- TOP NAV BAR -->
+<nav id="topnav" class="sticky top-0 z-50 bg-background border-b-2 border-primary transition-shadow">
+  <div class="flex justify-between items-center w-full px-5 md:px-margin-desktop max-w-container-max mx-auto py-4">
+    <!-- Logo -->
+    <div class="flex items-center gap-2 cursor-pointer" onclick="navigate('home')">
+      <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings:'FILL' 1;">construction</span>
+      <span class="font-headline-md text-headline-md font-bold text-secondary" style="font-family:'Playfair Display',serif;font-size:28px;line-height:1;">PC</span>
+    </div>
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-8" id="desktop-nav">
+      <a class="nav-link font-label-md text-label-md cursor-pointer transition-all duration-200" data-page="home" onclick="navigate('home')">Home</a>
+      <a class="nav-link font-label-md text-label-md cursor-pointer transition-all duration-200" data-page="sobre" onclick="navigate('sobre')">Sobre Nós</a>
+      <a class="nav-link font-label-md text-label-md cursor-pointer transition-all duration-200" data-page="servicos" onclick="navigate('servicos')">Serviços</a>
+      <a class="nav-link font-label-md text-label-md cursor-pointer transition-all duration-200" data-page="portfolio" onclick="navigate('portfolio')">Portfólio</a>
+      <a class="nav-link font-label-md text-label-md cursor-pointer transition-all duration-200" data-page="contacto" onclick="navigate('contacto')">Contacto</a>
+    </div>
+    <!-- CTA + Hamburger -->
+    <div class="flex items-center gap-4">
+      <button onclick="navigate('contacto')" class="bg-secondary text-white px-6 py-2 font-label-md text-label-md hover:bg-secondary-container transition-all active:translate-y-0.5 hidden sm:block">
+        Orçamento
+      </button>
+      <button id="hamburger-btn" class="md:hidden text-primary" onclick="openMobileMenu()">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== PAGE: HOME ==================== -->
+<div id="page-home" class="page active">
+  <!-- Hero Section -->
+  <section class="relative h-[795px] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img alt="Construção Moderna" class="w-full h-full object-cover brightness-[0.38]"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgZF4AOAvqYjNKCagkhh87GhxyfUicze3U0eEEHIyDx5WqY4EGPU9DmxEsRLt0aEK0fGu6Ed3tKfTgo7xjM-0-Fz4jM0No8SZSvhQi3s-mr406d0PyuYia4G_DMafrxXCtnmFVMnwwrPG7p-gXnkFawGN0CfmTqCpnnPbHGRaA6soTyEGVkBffXGXDLITVqUA2ESMxi6jS_9GGhmj5lDCuBx-YYA7qqyrZFqnTsN-uG6nMzWgtOsaJR0G6T4mzSZ5BLwzVzOI3GdN4"/>
+    </div>
+    <div class="relative z-10 px-5 md:px-margin-desktop max-w-container-max mx-auto w-full">
+      <div class="max-w-3xl reveal" id="hero-content">
+        <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-4">Paulo Cardoso — Lisboa, Portugal</span>
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6" style="font-family:'Playfair Display',serif;">
+          Construímos.<br/>Pintamos.<br/>Transformamos.
+        </h1>
+        <p class="font-body-lg text-body-lg text-surface-variant mb-10 max-w-xl">
+          Mais de 10 anos de experiência ao seu serviço. Excelência técnica e acabamentos premium para o seu projeto.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button onclick="navigate('contacto')" class="bg-secondary-container text-white px-10 py-5 font-label-md text-label-md uppercase tracking-widest hover:bg-secondary transition-all flex items-center gap-3 self-start">
+            Peça um Orçamento Gratuito
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+          <a href="tel:+351968379913" class="border-2 border-white text-white px-10 py-5 font-label-md text-label-md uppercase tracking-widest hover:bg-white hover:text-primary transition-all flex items-center gap-3 self-start">
+            <span class="material-symbols-outlined">phone</span>
+            +351 968 379 913
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white opacity-60">
+      <span class="font-label-sm text-label-sm uppercase tracking-widest">Scroll</span>
+      <span class="material-symbols-outlined animate-bounce">expand_more</span>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <section class="bg-primary border-b-4 border-secondary py-8">
+    <div class="px-5 md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center reveal">
+          <p class="font-headline-md text-white" style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;">10+</p>
+          <p class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">Anos de Experiência</p>
+        </div>
+        <div class="text-center reveal">
+          <p class="font-headline-md text-white" style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;">500+</p>
+          <p class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">Obras Concluídas</p>
+        </div>
+        <div class="text-center reveal">
+          <p class="font-headline-md text-white" style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;">98%</p>
+          <p class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">Clientes Satisfeitos</p>
+        </div>
+        <div class="text-center reveal">
+          <p class="font-headline-md text-white" style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;">6</p>
+          <p class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">Serviços Especializados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars Section -->
+  <section class="bg-background py-stack-lg border-b border-outline-variant">
+    <div class="px-5 md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="text-center mb-12 reveal">
+        <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-3">Porque Nós</span>
+        <h2 class="font-headline-lg text-headline-lg" style="font-family:'Playfair Display',serif;">Os Nossos Pilares</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="flex flex-col items-center text-center p-stack-md border border-outline-variant reveal card-hover">
+          <span class="material-symbols-outlined text-5xl text-secondary mb-4">verified</span>
+          <h3 class="font-headline-sm text-headline-sm mb-2" style="font-family:'Playfair Display',serif;">Qualidade</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Materiais de primeira linha e técnicas de vanguarda em cada detalhe.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-stack-md border border-outline-variant reveal card-hover">
+          <span class="material-symbols-outlined text-5xl text-secondary mb-4">schedule</span>
+          <h3 class="font-headline-sm text-headline-sm mb-2" style="font-family:'Playfair Display',serif;">Pontualidade</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Cumprimento rigoroso de prazos, respeitando o seu tempo e planeamento.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-stack-md border border-outline-variant reveal card-hover">
+          <span class="material-symbols-outlined text-5xl text-secondary mb-4">handshake</span>
+          <h3 class="font-headline-sm text-headline-sm mb-2" style="font-family:'Playfair Display',serif;">Confiança</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Transparência total e acompanhamento técnico em todas as fases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="py-stack-lg">
+    <div class="px-5 md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="flex justify-between items-end mb-stack-md">
+        <div class="reveal">
+          <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Portfólio</span>
+          <h2 class="font-headline-lg text-headline-lg" style="font-family:'Playfair Display',serif;">Projetos em Destaque</h2>
+        </div>
+        <a onclick="navigate('portfolio')" class="font-label-md text-label-md text-primary flex items-center gap-1 hover:text-secondary transition-colors cursor-pointer">
+          Ver Todos <span class="material-symbols-outlined text-sm">open_in_new</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="group relative aspect-[3/4] overflow-hidden border-2 border-primary reveal">
+          <img alt="Villa Quinta da Marinha" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiY1RKYad13s1OA4NCeEadwFlyOGaWFvy5miSWYweCCTtZhpy5W_bnx-s2DVBiMf6EQ9_PRsd90TJXgbbENE0CWF7YsNokX1zoQNL04GKsbw1w4F7hl2Ci5kr7HrKy4burQPMpCvXCX8IGEJspQEeMXR2M1eMJ9QsVAVTYdPSf0dXenp9WEPswWKn6W3BDqyK5fjVxuyerplZDKWlZ6vSadZWzg63ft7SB8HjYGp_JkfPQ_EA2Fnj_E3jUGc9SRWK-Q72iSHTLA6i0"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+            <span class="font-label-sm text-label-sm text-secondary-fixed mb-2">Pintura de Luxo</span>
+            <h4 class="font-headline-sm text-headline-sm text-white" style="font-family:'Playfair Display',serif;">Vivenda Quinta da Marinha</h4>
+          </div>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden border-2 border-primary reveal">
+          <img alt="Escritórios Tech Hub" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsvAB19EJVOcq-5l4ZD9AsfsqBLsNm5_SMUa8Wduk0XEuVULtXxP99e18QlKsLuQL4M4tJ_--czoyRAUfUkPTr2OrRDOWcybD0t631EYBAKwTMVrtipzl7U-lIfdb9xenA8plVOHce2Y4TO3z0m0sbnYQ7jAEmJvLVj1NeGTxB7GDh7b4bo6jL0DF-VWkcFilvW0KqU_tMS9RIF6YrKKEkGGNtQqmM5G1bEatRQy67kIpbZZtTENqcaV9e84Vs0e7KdEvsU06aaw6H"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+            <span class="font-label-sm text-label-sm text-secondary-fixed mb-2">Remodelação</span>
+            <h4 class="font-headline-sm text-headline-sm text-white" style="font-family:'Playfair Display',serif;">Escritórios Tech Hub</h4>
+          </div>
+        </div>
+        <div class="group relative aspect-[3/4] overflow-hidden border-2 border-primary reveal">
+          <img alt="Fachada Residencial Belém" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnU11SkDD1qlCrszTXCxGIxGjAVaqKZgqeuoc8fRzg4ZqA2y2V3Qg6hJWxBVNeVfU11pNdTxNs1DFhV0_9Ea5TocZ6Qn3NhKGJajyRHWvqgnc1j7s9p3ykhnXzcZGk3g82geudj8tiynnwEgUWRPjTYGJ6qFs0oGfa8rFq93ROg9lPLsKADmrdkdQ0MHo9HNM1X2MmX2vdoSTPKAnEGX4ciEZfEjd9O364Lwx3JYJ8IkN_S_UIzw_QM1QlZWIAxOHxYfyUYzkWUKE7"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+            <span class="font-label-sm text-label-sm text-secondary-fixed mb-2">Construção Civil</span>
+            <h4 class="font-headline-sm text-headline-sm text-white" style="font-family:'Playfair Display',serif;">Fachada Residencial Belém</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Teaser -->
+  <section class="bg-primary py-stack-lg text-on-primary">
+    <div class="px-5 md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+        <div class="reveal">
+          <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-4">Sobre Nós</span>
+          <h2 class="font-headline-lg text-headline-lg mb-6" style="font-family:'Playfair Display',serif;">Mãos que moldam<br/>o futuro.</h2>
+          <p class="font-body-lg text-body-lg text-on-primary-container mb-8">
+            A Pinta Constrói nasceu da paixão pelo rigor construtivo e pela arte do acabamento. Em cada projeto, entregamos não apenas uma obra, mas um legado de durabilidade e estética refinada.
+          </p>
+          <a onclick="navigate('sobre')" class="inline-flex items-center gap-2 border-b-2 border-secondary pb-1 font-label-md text-label-md text-secondary hover:text-white hover:border-white transition-all cursor-pointer">
+            Saiba mais sobre a nossa história
+            <span class="material-symbols-outlined">trending_flat</span>
+          </a>
+        </div>
+        <div class="relative reveal">
+          <div class="absolute -top-4 -left-4 w-full h-full border-2 border-secondary z-0"></div>
+          <img alt="Artesanato" class="relative z-10 w-full h-[400px] object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsylzkjOIUw_XIIeoNeLLxapcGCu1T9Ukdz3sXNL9pijV5ILkB88IgiwCYBb9TJMKHWgPvziu002EBslHbJY-RJ70XtshTLypBcmYeTdEnVxNfdAACY87APNEwwEoQkpPii4BCC_ql__AmLS27L6e_i1YStA9lu1ft4N4p3lx4vDBz2Z-YnNQ--r0aabhKdOo8WfX7P-57nOKco7fuNpH8zAmCRjU8WAQ4TuRAFR7BsG7XBkj3SJhFoJnbFS5QdXcgbWUIjGaAaNpQ"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Preview -->
+  <section class="py-stack-lg bg-surface-container-low border-t-4 border-secondary">
+    <div class="px-5 md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="text-center mb-12 reveal">
+        <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-3">Testemunhos</span>
+        <h2 class="font-headline-lg text-headline-lg" style="font-family:'Playfair Display',serif;">Confiança Construída</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="border-2 border-primary p-gutter bg-background flex flex-col justify-between reveal hard-shadow">
+          <div>
+            <div class="flex text-secondary mb-4">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+            </div>
+            <p class="font-body-lg text-body-lg italic mb-6">"O nível de detalhe na pintura da nossa sala foi impressionante. Equipa extremamente profissional e limpa."</p>
+          </div>
+          <div>
+            <p class="font-label-md text-label-md uppercase font-bold">Ricardo Santos</p>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">Cascais</p>
+          </div>
+        </div>
+        <div class="border-2 border-primary p-gutter bg-background flex flex-col justify-between reveal hard-shadow">
+          <div>
+            <div class="flex text-secondary mb-4">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+            </div>
+            <p class="font-body-lg text-body-lg italic mb-6">"Cumpriram os prazos de construção à risca. A Pinta Constrói deu-nos total segurança e tranquilidade."</p>
+          </div>
+          <div>
+            <p class="font-label-md text-label-md uppercase font-bold">Ana Margarida</p>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">Lisboa</p>
+          </div>
+        </div>
+        <div class="border-2 border-primary p-gutter bg-background flex flex-col justify-between reveal hard-shadow">
+          <div>
+            <div class="flex text-secondary mb-4">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+            </div>
+            <p class="font-body-lg text-body-lg italic mb-6">"Transformaram o nosso antigo loft num espaço moderno e funcional. Recomendo vivamente!"</p>
+          </div>
+          <div>
+            <p class="font-label-md text-label-md uppercase font-bold">Pedro Duarte</p>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">Ericeira</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <section class="bg-secondary py-12 px-5 md:px-margin-desktop text-center">
+    <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-left">
+        <h2 class="font-headline-md text-white mb-2" style="font-family:'Playfair Display',serif;font-size:28px;">Pronto para começar o seu projeto?</h2>
+        <p class="font-body-md text-secondary-fixed">Ligue agora ou peça um orçamento gratuito.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+        <a href="tel:+351968379913" class="bg-white text-secondary px-8 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-primary hover:text-white transition-all flex items-center gap-2">
+          <span class="material-symbols-outlined">phone</span>
+          +351 968 379 913
+        </a>
+        <button onclick="navigate('contacto')" class="border-2 border-white text-white px-8 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-white hover:text-secondary transition-all">
+          Orçamento Grátis
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== PAGE: SOBRE NÓS ==================== -->
+<div id="page-sobre" class="page">
+  <!-- Hero -->
+  <section class="relative w-full h-[480px] flex items-center justify-center overflow-hidden bg-primary">
+    <div class="absolute inset-0 opacity-40">
+      <img class="w-full h-full object-cover" alt="Construção"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbmhLMnezJEvGOmd394rV80Wud9vPQkUBinhlxe45uSJ8Iw2kZayR8-4Awk952HI3HU85hzJaRusM6rTp5AVtaqr95YqoUb4L0Sew1A9tiwzUyS0rbvPYsSSvjGuU29WD62WXt2uS8gGQYuidNlfTil7fVBLskoRasJYcnDldO0rxLLMuNr0iwgW4KGq0jN3Pr8Afp-3SjIOk2fkfur7Ojaut4dUYfY28XGCX7jIMvzG_UBpC8UpCoemmiPCFwykcrRBPBmUWeGhby"/>
+    </div>
+    <div class="relative z-10 text-center max-w-3xl px-5">
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-stack-sm drop-shadow-lg" style="font-family:'Playfair Display',serif;">Sobre a Pinta Constrói</h1>
+      <p class="font-body-lg text-body-lg text-surface-variant max-w-xl mx-auto">Mais do que erguer paredes, construímos legados com precisão técnica e acabamentos de excelência.</p>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section class="py-stack-lg px-5 md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+    <div class="border-2 border-primary p-2 hard-shadow bg-white reveal">
+      <img class="w-full aspect-square object-cover filter grayscale hover:grayscale-0 transition-all duration-500" alt="Paulo Cardoso"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD17Js79o8AP1HPTtGbB0YAL1AE0NkUz4AozYD1coFTLZZRlUtGJnwa_Tf_xi6YYB9k6tgWAcMfLQv3Ky5LCFi1hmLBIc7-yykhJ91sJqJX-fFoYHVZSXQd4Q-WW5xV8gBmPr_s4a9jEYsBYKG1EjZEmtN7tWG3AXSOciEqfMAh6bloUU3wRVZe3Xb6QZo9xO44y1BK9lQ8LAdf-7qMo_3eeTuKR0MylyKgyKXz8SMUJPovPdY9nrdnzahuuajVPNXaRSTdmcslVigS"/>
+    </div>
+    <div class="flex flex-col gap-stack-sm reveal">
+      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">O Fundador</span>
+      <h2 class="font-headline-lg text-headline-lg text-primary" style="font-family:'Playfair Display',serif;">Paulo Cardoso</h2>
+      <div class="w-16 h-1 bg-secondary mb-stack-sm"></div>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">
+        Com mais de 10 anos de experiência acumulada no coração da construção civil e pintura decorativa, Paulo Cardoso fundou a Pinta Constrói com uma visão clara: unir a robustez das estruturas modernas à delicadeza do acabamento artesanal.
+      </p>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        A sua jornada começou no canteiro de obras, onde aprendeu que a integridade de um edifício reside nos detalhes que ninguém vê, e o seu valor na estética que todos admiram. Hoje, lidera uma equipa que partilha este compromisso inabalável com a qualidade.
+      </p>
+      <a href="tel:+351968379913" class="mt-4 inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 font-label-md text-label-md hover:bg-primary transition-colors self-start">
+        <span class="material-symbols-outlined">phone</span>
+        +351 968 379 913
+      </a>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="bg-surface-container-low py-stack-lg px-5 md:px-margin-desktop">
+    <div class="max-w-container-max mx-auto">
+      <div class="text-center mb-stack-lg reveal">
+        <h2 class="font-headline-md text-headline-md text-primary mb-4" style="font-family:'Playfair Display',serif;">Os Nossos Pilares</h2>
+        <div class="w-24 h-1 bg-secondary mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="bg-background border-2 border-primary p-stack-md hard-shadow hover:-translate-y-1 transition-transform reveal">
+          <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">verified</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2" style="font-family:'Playfair Display',serif;">Trabalho de Qualidade</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Utilizamos materiais de primeira linha e técnicas rigorosas para garantir durabilidade e perfeição estética.</p>
+        </div>
+        <div class="bg-background border-2 border-primary p-stack-md hard-shadow hover:-translate-y-1 transition-transform reveal">
+          <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">groups</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2" style="font-family:'Playfair Display',serif;">Equipa Dedicada</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Profissionais especializados que tratam cada obra como se fosse a sua própria casa, com respeito e profissionalismo.</p>
+        </div>
+        <div class="bg-background border-2 border-primary p-stack-md hard-shadow hover:-translate-y-1 transition-transform reveal">
+          <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">sentiment_satisfied</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-2" style="font-family:'Playfair Display',serif;">Clientes Satisfeitos</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">A nossa maior recompensa é a confiança renovada dos nossos clientes ao verem as suas expectativas superadas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="py-stack-lg px-5 md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-headline-md text-headline-md text-primary" style="font-family:'Playfair Display',serif;">A Nossa Jornada</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+      <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-outline-variant z-0"></div>
+      <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left reveal">
+        <div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-bold mb-stack-sm border-2 border-secondary text-sm">2014</div>
+        <h4 class="font-label-md text-label-md text-secondary uppercase mb-2">O Início</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Primeiros projetos de pintura residencial em Lisboa.</p>
+      </div>
+      <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left reveal">
+        <div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-bold mb-stack-sm text-sm">2018</div>
+        <h4 class="font-label-md text-label-md text-secondary uppercase mb-2">Expansão</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Abertura de serviços para construção civil e renovações totais.</p>
+      </div>
+      <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left reveal">
+        <div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-bold mb-stack-sm text-sm">2021</div>
+        <h4 class="font-label-md text-label-md text-secondary uppercase mb-2">Consolidação</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Criação da marca Pinta Constrói e equipa técnica alargada.</p>
+      </div>
+      <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left reveal">
+        <div class="w-12 h-12 bg-secondary text-on-secondary flex items-center justify-center font-bold mb-stack-sm text-sm">Hoje</div>
+        <h4 class="font-label-md text-label-md text-secondary uppercase mb-2">Futuro</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Referência nacional em reabilitação de alta gama.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Grid -->
+  <section class="py-stack-lg px-5 md:px-margin-desktop max-w-container-max mx-auto">
+    <h2 class="font-headline-md text-headline-md text-primary mb-stack-md text-center reveal" style="font-family:'Playfair Display',serif;">Excelência em Detalhes</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter h-auto md:h-[500px] reveal">
+      <div class="md:col-span-2 relative overflow-hidden group border-2 border-primary">
+        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Interiores"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9b_gFy9E9yJlOoHHyUun3JgGvi5fSV-Sw6LLIR_ybqgxvm6zRfp5a1t3aZVxVNu7_hhFo1Zr5MRtXimvW2rTm5FmZtSumcEwf_xD7ABgJiP9YxXqkM5sbM7zE3fCYG8bgOEkPYcnaooAXWRqiPfWfmC-dxn_lY51fzJYQakW7AM8muXghClae2u_3IcWec3fvx3u4s2Df5fnq52xRiFMrSI8oLlvByf0XTy7hkwlNFvrEUyvInCUV77bj6uJDuMeMKbK3JdIo3_TF"/>
+        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-primary/80 to-transparent text-on-primary opacity-0 group-hover:opacity-100 transition-opacity">
+          <span class="font-label-md text-label-md">Interiores Residenciais</span>
+        </div>
+      </div>
+      <div class="grid grid-rows-2 gap-gutter h-full">
+        <div class="relative overflow-hidden group border-2 border-primary">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pintura Técnica"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2L_lzTccw7PqvdmHmv2oLwYEO-N2CAb9DuZqddRHwK2mxIJ861dmdqTgPRyOt9MEyruCLb3I0oztfLRFYMfduihAXeIEkuXUU4spEYZReNFbcIjp300e7rke35HNSwjR7VOYKB21LpYvWmChH4IdtWKFwVR9G7yD95PqzBhScsvYhgzd7JSSxPvVn1WQA24-FP5W7SvsLkNIXy8Pyax-oCSrKtJUKiC8FLelejJ7ADoGvaD9rgRlxbLaNriksloSGl1lK9o0r_OdB"/>
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-primary/80 to-transparent text-on-primary opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="font-label-md text-label-md">Pintura Técnica</span>
+          </div>
+        </div>
+        <div class="relative overflow-hidden group border-2 border-primary">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Estruturas"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA42XclUkqL1bUgxfmvtXNGBxMFlbJCiA4MHV5EuU3UIwP9Odfymvxg5IWAl9eLnR7o-JY_JbctxqP-Tuwv-IYDC4UldxT0q767tHfLU2gD-QWO0xKriRyjC7wKqJXamHQ1uleXXQdPsmbyo4gx-gvkO4TkOzhOkSTM9jFGgrjNPuiR-tHTJW7WNnHe-tXFlWc6yyYSIovCsDo7hOsj-qlew9ArtprB0H953Lh9J06o3YW_dw0UX7ROdesXS42vPUoSOZAfM1ebafzy"/>
+          <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-primary/80 to-transparent text-on-primary opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="font-label-md text-label-md">Estruturas Modernas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-stack-lg px-5 md:px-margin-desktop text-center">
+    <h2 class="font-headline-lg text-headline-lg text-on-primary mb-stack-sm" style="font-family:'Playfair Display',serif;">Pronto para começar o seu projeto?</h2>
+    <p class="font-body-lg text-body-lg text-surface-variant mb-stack-md max-w-2xl mx-auto">Deixe a sua obra nas mãos de quem entende de construção e valoriza o detalhe.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button onclick="navigate('contacto')" class="bg-secondary text-on-secondary px-10 py-4 font-label-md text-label-md hover:bg-white hover:text-primary transition-all duration-300 uppercase tracking-widest hard-shadow">
+        Solicitar Orçamento Gratuito
+      </button>
+      <a href="tel:+351968379913" class="border-2 border-secondary text-secondary px-10 py-4 font-label-md text-label-md hover:bg-secondary hover:text-white transition-all uppercase tracking-widest flex items-center gap-2 justify-center">
+        <span class="material-symbols-outlined">phone</span>
+        +351 968 379 913
+      </a>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== PAGE: SERVIÇOS ==================== -->
+<div id="page-servicos" class="page">
+  <main class="max-w-container-max mx-auto px-5 md:px-margin-desktop py-stack-lg">
+    <!-- Hero -->
+    <section class="mb-stack-lg">
+      <div class="flex flex-col md:flex-row items-end justify-between gap-gutter border-b-2 border-primary pb-stack-sm">
+        <div class="max-w-2xl reveal">
+          <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-tight" style="font-family:'Playfair Display',serif;">
+            Os Nossos Serviços
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">
+            Combinamos precisão arquitetónica com mestria artesanal para entregar resultados que resistem ao tempo e elevam o seu espaço.
+          </p>
+        </div>
+        <div class="hidden md:block reveal">
+          <span class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em]">Craftsmanship</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      <div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover">
+        <div class="w-12 h-12 bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-3xl">format_paint</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary" style="font-family:'Playfair Display',serif;">Pintura Interior</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Acabamentos premium com tintas de alta qualidade, garantindo durabilidade e uma estética refinada para cada divisão.</p>
+        <a onclick="navigate('contacto')" class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer">
+          SABER MAIS <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+      <div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover">
+        <div class="w-12 h-12 bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-3xl">imagesearch_roller</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary" style="font-family:'Playfair Display',serif;">Pintura Exterior</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Proteção e revitalização de fachadas contra as intempéries, utilizando membranas elásticas e revestimentos térmicos avançados.</p>
+        <a onclick="navigate('contacto')" class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer">
+          SABER MAIS <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+      <div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover">
+        <div class="w-12 h-12 bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-3xl">foundation</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary" style="font-family:'Playfair Display',serif;">Construção e Remodelação</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Do conceito à execução, transformamos estruturas com rigor técnico e materiais nobres para criar espaços modernos e funcionais.</p>
+        <a onclick="navigate('contacto')" class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer">
+          SABER MAIS <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+      <div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover">
+        <div class="w-12 h-12 bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-3xl">water_drop</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary" style="font-family:'Playfair Display',serif;">Impermeabilização</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Soluções definitivas contra infiltrações e humidade em terraços, coberturas e caves com garantia de selagem total.</p>
+        <a onclick="navigate('contacto')" class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer">
+          SABER MAIS <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+      <div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover">
+        <div class="w-12 h-12 bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-3xl">architecture</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary" style="font-family:'Playfair Display',serif;">Acabamentos e Estuques</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Nivelamento perfeito de superfícies e aplicação de estuques decorativos para um toque de sofisticação e suavidade.</p>
+        <a onclick="navigate('contacto')" class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer">
+          SABER MAIS <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+      <div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col items-start gap-4 card-hover">
+        <div class="w-12 h-12 bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-3xl">build</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-primary" style="font-family:'Playfair Display',serif;">Pequenas Obras e Reparações</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Manutenção geral e intervenções rápidas com a mesma qualidade e atenção ao detalhe das nossas grandes obras.</p>
+        <a onclick="navigate('contacto')" class="group flex items-center gap-2 font-label-md text-label-md text-secondary hover:text-primary transition-colors cursor-pointer">
+          SABER MAIS <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="mt-stack-lg relative overflow-hidden bg-primary p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-gutter">
+      <div class="relative z-10">
+        <h2 class="font-headline-md text-headline-md text-white mb-2" style="font-family:'Playfair Display',serif;">Precisa de um serviço personalizado?</h2>
+        <p class="font-body-lg text-body-lg text-surface-variant">Fale connosco para soluções à medida do seu projeto.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+        <button onclick="navigate('contacto')" class="relative z-10 bg-secondary text-white px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300 border-2 border-transparent hover:border-primary">
+          Contactar Agora
+        </button>
+        <a href="tel:+351968379913" class="relative z-10 border-2 border-secondary text-secondary px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-secondary hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">
+          <span class="material-symbols-outlined">phone</span>
+          968 379 913
+        </a>
+      </div>
+    </section>
+
+    <!-- Credibility -->
+    <section class="mt-stack-lg grid grid-cols-1 md:grid-cols-2 gap-gutter">
+      <div class="relative aspect-video border-2 border-primary overflow-hidden">
+        <img alt="Trabalhador de construção" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmIwX5O3Vyfle9-x9gR5QUYJYXLevPSTkfaXIYGeOYkceiE4tshhXwzJ0e5gtNGalTiAZuTSsra2o2BDbA8qA3w0uLihLHpLrJ2Gx2rLpKcYzySDVDBXVVovN7-ULWG9j9jB8GZVVOU7ypHeT-HG0VkqzVSY-JpXbrlnMMtxC1Zl4qauZN2YlprYBShzwY465_UGjs9OjD42x78lftr7PcfNof_sdfFKwrQ8-kWsmaECZGsFVaEKVjidefFlGbOXrLVbMuJ7d-aXin"/>
+      </div>
+      <div class="bg-surface-container-high p-8 flex flex-col justify-center border-2 border-primary">
+        <span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest mb-4">Garantia de Qualidade</span>
+        <h2 class="font-headline-md text-headline-md text-primary mb-6" style="font-family:'Playfair Display',serif;">Excelência em cada pincelada, rigor em cada tijolo.</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6">A Pinta Constrói não entrega apenas serviços; entrega tranquilidade. O nosso processo garante que cada projeto seja concluído com os mais elevados padrões da indústria portuguesa.</p>
+        <div class="flex gap-stack-md">
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-primary" style="font-family:'Playfair Display',serif;">10+</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Anos de Experiência</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-primary" style="font-family:'Playfair Display',serif;">500+</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Obras Concluídas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ==================== PAGE: PORTFÓLIO ==================== -->
+<div id="page-portfolio" class="page">
+  <main class="max-w-container-max mx-auto px-5 md:px-margin-desktop">
+    <!-- Hero -->
+    <section class="py-stack-lg border-b border-outline-variant reveal">
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase mb-stack-sm" style="font-family:'Playfair Display',serif;">
+        Os Nossos Trabalhos
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Arquitetura de precisão e acabamentos de mestre. Explore a nossa galeria de projetos concluídos, onde a integridade estrutural encontra o refinamento estético.
+      </p>
+    </section>
+
+    <!-- Filters -->
+    <section class="py-stack-md flex flex-wrap gap-4 items-center" id="portfolio-filters">
+      <button class="filter-btn px-8 py-3 bg-primary text-on-primary font-label-md text-label-md hard-shadow transition-all active:translate-y-1" data-filter="all">Tudo</button>
+      <button class="filter-btn px-8 py-3 border-2 border-primary text-primary font-label-md text-label-md hover:bg-secondary hover:text-white hover:border-secondary transition-all" data-filter="pintura">Pintura</button>
+      <button class="filter-btn px-8 py-3 border-2 border-primary text-primary font-label-md text-label-md hover:bg-secondary hover:text-white hover:border-secondary transition-all" data-filter="construcao">Construção</button>
+      <button class="filter-btn px-8 py-3 border-2 border-primary text-primary font-label-md text-label-md hover:bg-secondary hover:text-white hover:border-secondary transition-all" data-filter="remodelacao">Remodelação</button>
+    </section>
+
+    <!-- Project Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter py-stack-md" id="projects-grid">
+      <div class="project-card border border-primary bg-white p-4 group hard-shadow-hover transition-all" data-category="remodelacao">
+        <div class="aspect-square bg-surface-variant overflow-hidden mb-4 relative">
+          <img alt="Villa Cascais" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyOjM4I2SQDMoNfh7EykOa-9FdTaCU0XYOxifB-O5T3ZlCE1wR2PFeq6FDSXWjOCNTlD9ZF9kEH-x8ptx8F5kL4Ap640MN-DVG_KY7moWgb0dbFUvPOr7DHqVlpc8-rUXkbiv-ue0eZiRBxQxa7COuDSXzC2CsR7FXADH_J_I4RJ4Mruf2jYFG526RYC_jgy5Rjhs-Bt5SZpzhcYfz94XvlnvizyaC4Ye5REp_z3ndSYiRQhTjrbFfZYMC6ahuuQfxMb8X0L74uOsN"/>
+          <span class="absolute top-4 left-4 bg-secondary text-white font-label-sm text-label-sm px-3 py-1 uppercase">Remodelação</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-1" style="font-family:'Playfair Display',serif;">Villa Cascais</h3>
+        <p class="font-body-md text-on-surface-variant">Reabilitação completa de moradia de luxo.</p>
+      </div>
+      <div class="project-card border border-primary bg-white p-4 group hard-shadow-hover transition-all" data-category="pintura">
+        <div class="aspect-square bg-surface-variant overflow-hidden mb-4 relative">
+          <img alt="Apartamento Estrela" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH9IbwLIw-d--WE83oG9g3iL0A0ozZVhql89Myg6177Q_JBj_laDL5XJK099kENrClaK42KQSeqgE7pvNU0oBqBfYEJKSixkBmdpvVfD3BsOQn-r69zwm0Em-V5vxkF6CcE1SPtZuU5qy6xKehFXXTsQeNa-oTKrN9BGA0o_XdHbM2A7A6D16oxQ5yafMn8aHEsQnCboO56A-fE9Qpk6qq3RjcEJubW7u1NQ5c__bCr9oOUQGU5WP7_Og_hDLOThOiECzuzla19MEe"/>
+          <span class="absolute top-4 left-4 bg-primary text-white font-label-sm text-label-sm px-3 py-1 uppercase">Pintura</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-1" style="font-family:'Playfair Display',serif;">Apartamento Estrela</h3>
+        <p class="font-body-md text-on-surface-variant">Pintura decorativa e acabamentos premium.</p>
+      </div>
+      <div class="project-card border border-primary bg-white p-4 group hard-shadow-hover transition-all" data-category="construcao">
+        <div class="aspect-square bg-surface-variant overflow-hidden mb-4 relative">
+          <img alt="Edifício Office Hub" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3V_OfoOI-sOwhIDCBuOsfX_ykyrcY7tQHEY4Nez_zcsRvurb0S7iNpVWP5qlYUKbLAAvW6dHHEXOMwZ1xuKk8wdw84-PBRvYBwce-OWhR6ZnXGPsn4BAd_TgH5i4wdJD9HLjyIoi8SxiOtRoRCCaJ0i73BRwBX8wtfgi1jDZnseMOa7D_9ym0DTRvPfnLAwQdoV49WR0GC3QUSo-MjAia4PTAlc_hzfOG0QO9NrzuH_6obBQHPUOrR_Fz5lqVJRXvxDuwESYnMEuV"/>
+          <span class="absolute top-4 left-4 bg-primary text-white font-label-sm text-label-sm px-3 py-1 uppercase">Construção</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-1" style="font-family:'Playfair Display',serif;">Edifício Office Hub</h3>
+        <p class="font-body-md text-on-surface-variant">Construção de estrutura metálica e betão.</p>
+      </div>
+      <div class="project-card border border-primary bg-white p-4 group hard-shadow-hover transition-all" data-category="remodelacao">
+        <div class="aspect-square bg-surface-variant overflow-hidden mb-4 relative">
+          <img alt="Loft Beato" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6JP-KQ5tL2ctVMuKdvZiyfm-d8F37CCIyNP96SalKnVePdnUfXqLMPJuDDfBq2Ct1cxl79GI15p2ir09bV7oyI0roMw6mAAafnTf44Ec-C4ebvXVpv72knWri7-uDe82xKGavPsPteNDM35mcxOU40ZvSFB0BjWOwhwgPCh3_4ELvgPwPyeINZnp2oytdAWsKjJyBNEyjRZFgsoOlJRARCkS50iov45ou_bMXqmw_v-AjPqzEz8UKXaxJ8NSDLdYkmSDiFZ4ZmV2j"/>
+          <span class="absolute top-4 left-4 bg-secondary text-white font-label-sm text-label-sm px-3 py-1 uppercase">Remodelação</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-1" style="font-family:'Playfair Display',serif;">Loft Beato</h3>
+        <p class="font-body-md text-on-surface-variant">Conversão industrial para habitação moderna.</p>
+      </div>
+      <div class="project-card border border-primary bg-white p-4 group hard-shadow-hover transition-all" data-category="pintura">
+        <div class="aspect-square bg-surface-variant overflow-hidden mb-4 relative">
+          <img alt="Cozinha Minimalista" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMr15xBV92cB-gEZtKqZCVhwvEDKyMdyIK7voThz2Vrutnq-3BVDhFiru7dPs9CZ9HILSAxgX5FreiNWUKPxq--zmopDEQAXyEWZS6CRrn7xVLAIY5nB_tC33KWw5G68fe66B22iWOJWSN1bhf90dJYwEUrQBGSL10tNlG6XbbKdX64V3iQaCdAdKFkQ2Y22Ho3nrlQmyHZetR9oammOhjy8nL_eOhiYlaUCikoGCfhERh3EtzXdCarh4b_LoeYg8Is0_vmH_kXwDp"/>
+          <span class="absolute top-4 left-4 bg-primary text-white font-label-sm text-label-sm px-3 py-1 uppercase">Pintura</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-1" style="font-family:'Playfair Display',serif;">Cozinha Minimalista</h3>
+        <p class="font-body-md text-on-surface-variant">Tratamento de superfícies e lacagem.</p>
+      </div>
+      <div class="project-card border border-primary bg-white p-4 group hard-shadow-hover transition-all" data-category="construcao">
+        <div class="aspect-square bg-surface-variant overflow-hidden mb-4 relative">
+          <img alt="Casa Sintra" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoCgNuNOBVatjDleZmc9KQGe1IsUMaNgKH4MFngT8BNYLYn3MtVhyhvotCsT-flajDxFPrPFThPjuQHeLU7PoIX33ZapZyncpVr4CXk7XVv45jX4EtR6lWf6ihMFo-oY0yXEO3h9FVRoYdNXtXxSEu3oPXTx2N1C43VcYJDvnymtIddm3s9D2oaqffSq8_8aNAPESP8pEpdciTHRkgCbFeEqhIkXGs73HeS2eY62fOManJtWO4HvQqENT5bSX0M0w-DYSsQGBr8TPm"/>
+          <span class="absolute top-4 left-4 bg-primary text-white font-label-sm text-label-sm px-3 py-1 uppercase">Construção</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-1" style="font-family:'Playfair Display',serif;">Casa Sintra</h3>
+        <p class="font-body-md text-on-surface-variant">Construção de raiz com design contemporâneo.</p>
+      </div>
+      <div class="project-card border border-primary bg-white p-4 group hard-shadow-hover transition-all" data-category="remodelacao">
+        <div class="aspect-square bg-surface-variant overflow-hidden mb-4 relative">
+          <img alt="Banho Premium" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo54etDJMnzLoYcRglGho1u-jj7491zXgYkIIupsrPAZBu_jZpWzYLtuIPUAmVFmZo5mlJxpfvRIk0WNR18gC-I747PstXKb9bPK57XMBvZHu4DnQI23takMsaAgU5_3-jNoI0ozdauoPl0AYYGp0bzNaytc09xx2cLjScj5F70beuzusrv2RnEZ1IInsqGgpmsTBlGw8HvCsGxGXYfc162XI-axpRBSG3R9I04z-Gs67JTqTA2TcRD6SB8dIZCyMJYwGKF4cvsZQX"/>
+          <span class="absolute top-4 left-4 bg-secondary text-white font-label-sm text-label-sm px-3 py-1 uppercase">Remodelação</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-1" style="font-family:'Playfair Display',serif;">Banho Premium</h3>
+        <p class="font-body-md text-on-surface-variant">Remodelação total de casa de banho principal.</p>
+      </div>
+      <div class="project-card border border-primary bg-white p-4 group hard-shadow-hover transition-all" data-category="construcao">
+        <div class="aspect-square bg-surface-variant overflow-hidden mb-4 relative">
+          <img alt="Pavilhão Industrial" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq2JZVfn1QFPOsQ-q3g0RLFgcb9_8bv3KqTAsmISecuWdR-dY9tb-AqDfZ3RNLxJMXFBGGpw3iyuLJEeEVU1HBsomIFehNI4ltginibvCcNPXczj9JeViB9aEJukLmXBLgjVOFKL4XQou9mnKW_bmeMKLUuPjdmz8X_cvbvSeATiUz2wNSoBat6JZ8jk8eIRSEKc0g8zfKiOHemX5qjzdx2MRrhlu0w81t53X59OZvwhARQhBfbB9tJrc0TUQwtm3z6QQi6aW4LW6e"/>
+          <span class="absolute top-4 left-4 bg-primary text-white font-label-sm text-label-sm px-3 py-1 uppercase">Construção</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-1" style="font-family:'Playfair Display',serif;">Pavilhão Industrial</h3>
+        <p class="font-body-md text-on-surface-variant">Armazém logístico de elevada durabilidade.</p>
+      </div>
+      <div class="project-card border border-primary bg-white p-4 group hard-shadow-hover transition-all" data-category="pintura">
+        <div class="aspect-square bg-surface-variant overflow-hidden mb-4 relative">
+          <img alt="Atelier de Arte" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxI_8_pX6Xb4ZAG-4N4Wzn_74zMFVeQxYWROwT6vHRc9KYTHfWyiV8Ils7VV9hA9Pwo1c95eLiAwVNa8OpyuMP6g8mlJv8AExxrMvx67B3aCmfGRiacly0bHXN_ikjinuSAnISDd5yxTfSdVF0xO0ObqaK34zI34faSzMg-G5OOIf9MJKVhcE_Ef8uaT1vaKukavFHLz3RakMGJB2vl3nbbIQFGbQvxOnS69tWM9rE5xVka4Zezux49ffhc149S4B2O7LDe-Q15hzb"/>
+          <span class="absolute top-4 left-4 bg-primary text-white font-label-sm text-label-sm px-3 py-1 uppercase">Pintura</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-1" style="font-family:'Playfair Display',serif;">Atelier de Arte</h3>
+        <p class="font-body-md text-on-surface-variant">Preparação de superfícies para galeria.</p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-stack-lg border-t-4 border-secondary mt-stack-lg">
+      <h2 class="font-headline-lg text-headline-lg uppercase mb-stack-md text-primary reveal" style="font-family:'Playfair Display',serif;">Confiança Construída</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="border-2 border-primary p-gutter bg-surface-container-low flex flex-col justify-between reveal">
+          <div>
+            <div class="flex text-secondary mb-4">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+            </div>
+            <p class="font-body-lg text-body-lg italic mb-6">"O nível de detalhe na pintura da nossa sala foi impressionante. Equipa extremamente profissional e limpa."</p>
+          </div>
+          <div>
+            <p class="font-label-md text-label-md uppercase font-bold">Ricardo Santos</p>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">Cascais</p>
+          </div>
+        </div>
+        <div class="border-2 border-primary p-gutter bg-surface-container-low flex flex-col justify-between reveal">
+          <div>
+            <div class="flex text-secondary mb-4">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+            </div>
+            <p class="font-body-lg text-body-lg italic mb-6">"Cumpriram os prazos de construção à risca. A integridade estrutural era o que mais nos preocupava e a Pinta Constrói deu-nos total segurança."</p>
+          </div>
+          <div>
+            <p class="font-label-md text-label-md uppercase font-bold">Ana Margarida</p>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">Lisboa</p>
+          </div>
+        </div>
+        <div class="border-2 border-primary p-gutter bg-surface-container-low flex flex-col justify-between reveal">
+          <div>
+            <div class="flex text-secondary mb-4">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+            </div>
+            <p class="font-body-lg text-body-lg italic mb-6">"Transformaram o nosso antigo loft num espaço moderno e funcional. Recomendo vivamente para qualquer remodelação."</p>
+          </div>
+          <div>
+            <p class="font-label-md text-label-md uppercase font-bold">Pedro Duarte</p>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">Ericeira</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-stack-lg text-center bg-primary text-on-primary my-stack-lg p-stack-md">
+      <h2 class="font-headline-lg text-headline-lg mb-4" style="font-family:'Playfair Display',serif;">Pronto para começar o seu projeto?</h2>
+      <p class="font-body-lg text-body-lg mb-8 opacity-80">Solicite um orçamento gratuito e receba uma análise detalhada da nossa equipa técnica.</p>
+      <button onclick="navigate('contacto')" class="bg-secondary text-white px-10 py-4 font-label-md text-label-md uppercase hard-shadow hover:-translate-y-0.5 transition-all">
+        Pedir Orçamento Agora
+      </button>
+    </section>
+  </main>
+</div>
+
+<!-- ==================== PAGE: CONTACTO ==================== -->
+<div id="page-contacto" class="page">
+  <main class="max-w-container-max mx-auto px-5 md:px-margin-desktop py-stack-lg">
+    <!-- Hero -->
+    <div class="mb-stack-lg reveal">
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4" style="font-family:'Playfair Display',serif;">Contacte-nos</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Estamos prontos para transformar a sua visão em realidade. Entre em contacto para discutir o seu projeto de construção ou pintura.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+      <!-- Contact Form -->
+      <section class="lg:col-span-7 bg-surface p-8 border-2 border-primary hard-shadow reveal">
+        <h2 class="font-headline-sm text-headline-sm text-primary mb-6" style="font-family:'Playfair Display',serif;">Envie uma Mensagem</h2>
+        <form id="contact-form" class="flex flex-col gap-6" onsubmit="handleFormSubmit(event)">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-primary uppercase" for="cf-nome">Nome</label>
+              <input id="cf-nome" class="bg-transparent border-b-2 border-primary p-2 focus:border-secondary-container focus:ring-0 outline-none transition-colors" placeholder="Seu nome completo" type="text" required/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-primary uppercase" for="cf-telefone">Telefone</label>
+              <input id="cf-telefone" class="bg-transparent border-b-2 border-primary p-2 focus:border-secondary-container focus:ring-0 outline-none transition-colors" placeholder="+351 000 000 000" type="tel"/>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="font-label-sm text-label-sm text-primary uppercase" for="cf-email">Email</label>
+            <input id="cf-email" class="bg-transparent border-b-2 border-primary p-2 focus:border-secondary-container focus:ring-0 outline-none transition-colors" placeholder="email@exemplo.pt" type="email" required/>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="font-label-sm text-label-sm text-primary uppercase" for="cf-servico">Serviço</label>
+            <select id="cf-servico" class="bg-transparent border-b-2 border-primary p-2 focus:border-secondary-container focus:ring-0 outline-none transition-colors appearance-none">
+              <option value="">Selecione um serviço</option>
+              <option>Pintura de Interiores</option>
+              <option>Pintura Exterior</option>
+              <option>Remodelação Total</option>
+              <option>Construção Civil</option>
+              <option>Impermeabilização</option>
+              <option>Acabamentos e Estuques</option>
+              <option>Manutenção Predial</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="font-label-sm text-label-sm text-primary uppercase" for="cf-mensagem">Mensagem</label>
+            <textarea id="cf-mensagem" class="bg-transparent border-b-2 border-primary p-2 focus:border-secondary-container focus:ring-0 outline-none transition-colors resize-none" placeholder="Como podemos ajudar? Descreva o seu projeto..." rows="4"></textarea>
+          </div>
+          <button class="bg-secondary-container text-white font-label-md text-label-md py-4 px-8 self-start hover:bg-secondary transition-all active:translate-y-1 uppercase tracking-widest" type="submit" id="submit-btn">
+            ENVIAR MENSAGEM
+          </button>
+        </form>
+      </section>
+      <!-- Sidebar -->
+      <aside class="lg:col-span-5 flex flex-col gap-gutter reveal">
+        <div class="grid grid-cols-1 gap-4">
+          <a href="tel:+351968379913" class="p-6 border border-primary bg-white flex items-start gap-4 hover:border-secondary transition-colors group">
+            <span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">phone_in_talk</span>
+            <div>
+              <h4 class="font-label-md text-label-md text-primary mb-1">Telefone / WhatsApp</h4>
+              <p class="font-body-md text-body-md text-secondary font-semibold">+351 968 379 913</p>
+              <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Paulo Cardoso (E. Cardoso)</p>
+            </div>
+          </a>
+          <a href="mailto:geral@pintaconstroi.pt" class="p-6 border border-primary bg-white flex items-start gap-4 hover:border-secondary transition-colors group">
+            <span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">mail</span>
+            <div>
+              <h4 class="font-label-md text-label-md text-primary mb-1">Email</h4>
+              <p class="font-body-md text-body-md">geral@pintaconstroi.pt</p>
+            </div>
+          </a>
+          <div class="p-6 border border-primary bg-white flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary">location_on</span>
+            <div>
+              <h4 class="font-label-md text-label-md text-primary mb-1">Localização</h4>
+              <p class="font-body-md text-body-md">Lisboa, Portugal</p>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">Servimos toda a Grande Lisboa e arredores</p>
+            </div>
+          </div>
+          <div class="p-6 border border-primary bg-white flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary">schedule</span>
+            <div>
+              <h4 class="font-label-md text-label-md text-primary mb-1">Horário</h4>
+              <p class="font-body-md text-body-md">Segunda a Sexta: 08h00 - 18h00</p>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">Sábado: 09h00 - 13h00</p>
+            </div>
+          </div>
+        </div>
+        <!-- Map placeholder -->
+        <div class="relative h-64 border-2 border-primary group overflow-hidden">
+          <img alt="Mapa Lisboa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA87A96ijlAwIvlfxQhX_b3l2aOzzyxBls_dHqp2gOu3QglvoM0Dfrr_iu8CwkR5IOBdZJ3KMhA_jJGTM5yxtjQLL8LxtoEQjZyTYcL-N0OOUdTR8A_Eet4HgQapQmKJOYdbigv0JOgD5eZXXNakxk7omIysjk1WffoN9dmh59YZCOwKtTFfPTNUR2bRB6W1fQTIuXGUoOaTFqAvHttuaIkOY9D3b6k6swkpPVJC-QeRMvmNCPh15KDJ3tnKXhsS7QMqEPNN5yEH9BK"/>
+          <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+          <div class="absolute bottom-4 left-4 bg-white border border-primary p-2 font-label-sm text-label-sm uppercase">
+            Sede Central: Lisboa
+          </div>
+        </div>
+        <!-- Direct call CTA -->
+        <a href="tel:+351968379913" class="block bg-secondary text-white text-center py-4 px-6 font-label-md text-label-md uppercase tracking-widest hover:bg-primary transition-colors flex items-center justify-center gap-3">
+          <span class="material-symbols-outlined">phone</span>
+          Ligar Agora: +351 968 379 913
+        </a>
+      </aside>
+    </div>
+
+    <!-- FAQ -->
+    <section class="mt-stack-lg border-t-2 border-primary pt-stack-md">
+      <h2 class="font-headline-md text-headline-md text-primary mb-stack-md reveal" style="font-family:'Playfair Display',serif;">Perguntas Frequentes</h2>
+      <div class="max-w-3xl flex flex-col gap-4">
+        <div class="faq-item border border-outline-variant bg-white p-6 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <h3 class="font-label-md text-label-md text-primary">Fazem orçamentos gratuitos?</h3>
+            <span class="material-symbols-outlined faq-icon">add</span>
+          </div>
+          <div class="faq-content">
+            <p class="font-body-md text-body-md text-on-surface-variant pt-4">Sim, realizamos visitas técnicas e elaboramos orçamentos detalhados sem qualquer custo ou compromisso. A transparência é a base do nosso trabalho. Ligue para <a href="tel:+351968379913" class="text-secondary font-semibold">+351 968 379 913</a>.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-outline-variant bg-white p-6 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <h3 class="font-label-md text-label-md text-primary">Qual a vossa área de atuação?</h3>
+            <span class="material-symbols-outlined faq-icon">add</span>
+          </div>
+          <div class="faq-content">
+            <p class="font-body-md text-body-md text-on-surface-variant pt-4">Atuamos primordialmente na Grande Lisboa e arredores, mas aceitamos projetos de grande envergadura em todo o território nacional sob consulta prévia.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-outline-variant bg-white p-6 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <h3 class="font-label-md text-label-md text-primary">Quanto tempo demora um projeto de pintura?</h3>
+            <span class="material-symbols-outlined faq-icon">add</span>
+          </div>
+          <div class="faq-content">
+            <p class="font-body-md text-body-md text-on-surface-variant pt-4">Depende da dimensão do projeto. Uma habitação típica demora entre 3 a 7 dias úteis. Projetos comerciais ou de remodelação total podem levar várias semanas. Sempre fornecemos um planeamento detalhado antes do início das obras.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-outline-variant bg-white p-6 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <h3 class="font-label-md text-label-md text-primary">Que garantias oferecem no trabalho?</h3>
+            <span class="material-symbols-outlined faq-icon">add</span>
+          </div>
+          <div class="faq-content">
+            <p class="font-body-md text-body-md text-on-surface-variant pt-4">Todos os nossos trabalhos têm garantia de 2 anos. Usamos materiais certificados de marcas de referência e fornecemos toda a documentação técnica no final de cada obra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ==================== FOOTER (shared) ==================== -->
+<footer class="w-full px-5 md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary border-t-4 border-secondary text-on-primary">
+  <div class="flex flex-col gap-4">
+    <div class="flex items-center gap-2 cursor-pointer" onclick="navigate('home')">
+      <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings:'FILL' 1;">construction</span>
+      <span class="font-headline-sm text-headline-sm text-secondary" style="font-family:'Playfair Display',serif;">Pinta Constrói</span>
+    </div>
+    <p class="font-body-md text-body-md text-surface-variant max-w-xs">Arquitetura de precisão e acabamentos de mestre em Portugal.</p>
+    <a href="tel:+351968379913" class="flex items-center gap-2 text-secondary font-semibold hover:text-white transition-colors">
+      <span class="material-symbols-outlined text-lg">phone</span>
+      +351 968 379 913
+    </a>
+    <span class="font-label-sm text-label-sm text-surface-variant">© 2026 Pinta Constrói — Paulo Cardoso</span>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-stack-md">
+    <div class="flex flex-col gap-2">
+      <span class="font-label-sm text-label-sm text-secondary uppercase mb-2">Navegação</span>
+      <a onclick="navigate('home')" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer">Home</a>
+      <a onclick="navigate('sobre')" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer">Sobre Nós</a>
+      <a onclick="navigate('servicos')" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer">Serviços</a>
+      <a onclick="navigate('portfolio')" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer">Portfólio</a>
+      <a onclick="navigate('contacto')" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer">Contacto</a>
+    </div>
+    <div class="flex flex-col gap-2">
+      <span class="font-label-sm text-label-sm text-secondary uppercase mb-2">Serviços</span>
+      <a onclick="navigate('servicos')" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer">Pintura Interior</a>
+      <a onclick="navigate('servicos')" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer">Pintura Exterior</a>
+      <a onclick="navigate('servicos')" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer">Remodelação</a>
+      <a onclick="navigate('servicos')" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors cursor-pointer">Impermeabilização</a>
+    </div>
+    <div class="flex flex-col gap-2">
+      <span class="font-label-sm text-label-sm text-secondary uppercase mb-2">Contacto</span>
+      <a href="tel:+351968379913" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors">+351 968 379 913</a>
+      <a href="mailto:geral@pintaconstroi.pt" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors">Email</a>
+      <a href="https://wa.me/351968379913" target="_blank" class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors">WhatsApp</a>
+      <span class="font-label-sm text-label-sm text-surface-variant">Lisboa, Portugal</span>
+    </div>
+  </div>
+  <!-- Newsletter -->
+  <div class="flex flex-col gap-4 bg-primary-container p-6 border border-outline-variant min-w-[200px]">
+    <span class="font-label-md text-label-md text-white">Newsletter</span>
+    <div class="flex">
+      <input class="bg-transparent border-b-2 border-outline focus:border-secondary outline-none px-2 py-1 font-body-md text-white w-full" placeholder="O seu email" type="email" id="newsletter-email"/>
+      <button onclick="subscribeNewsletter()" class="ml-2 text-secondary hover:text-white transition-colors">
+        <span class="material-symbols-outlined">send</span>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ==================== ROUTER ====================
+  let currentPage = 'home';
+
+  function navigate(page) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    // Show target page
+    const target = document.getElementById('page-' + page);
+    if (target) {
+      target.classList.add('active');
+      currentPage = page;
+    }
+    // Update nav links
+    updateNavLinks(page);
+    // Scroll to top smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Re-run reveal animations
+    setTimeout(initReveal, 100);
+  }
+
+  function updateNavLinks(page) {
+    document.querySelectorAll('.nav-link').forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      if (linkPage === page) {
+        link.classList.add('text-secondary', 'border-b-2', 'border-secondary');
+        link.classList.remove('text-on-background', 'hover:text-secondary');
+      } else {
+        link.classList.remove('text-secondary', 'border-b-2', 'border-secondary');
+        link.classList.add('text-on-background', 'hover:text-secondary');
+      }
+    });
+  }
+
+  // ==================== MOBILE MENU ====================
+  function openMobileMenu() {
+    document.getElementById('mobile-menu').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ==================== SCROLL REVEAL ====================
+  function initReveal() {
+    const reveals = document.querySelectorAll('#page-' + currentPage + ' .reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => {
+      if (!el.classList.contains('visible')) {
+        observer.observe(el);
+      }
+    });
+    // Immediately trigger visible elements
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  // ==================== SCROLL PROGRESS ====================
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (scrolled / max) * 100 : 0;
+    document.getElementById('scroll-progress').style.width = pct + '%';
+
+    // Back to top
+    const btn = document.getElementById('back-to-top');
+    if (scrolled > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+
+    // Nav shadow
+    const nav = document.getElementById('topnav');
+    if (scrolled > 10) {
+      nav.style.boxShadow = '0 2px 12px rgba(0,0,0,0.08)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // ==================== FAQ ====================
+  function toggleFaq(element) {
+    const isActive = element.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+    if (!isActive) element.classList.add('active');
+  }
+
+  // ==================== PORTFOLIO FILTER ====================
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update button styles
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'hard-shadow');
+        b.classList.add('border-2', 'border-primary', 'text-primary');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary', 'hard-shadow');
+      btn.classList.remove('border-2', 'border-primary', 'text-primary');
+
+      const filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = '';
+          card.style.animation = 'fadeIn 0.4s ease';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // ==================== CONTACT FORM ====================
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'A ENVIAR...';
+    btn.disabled = true;
+
+    // Simulate sending (in real world would POST to backend or FormSubmit/Netlify)
+    setTimeout(() => {
+      btn.textContent = '✓ ENVIADO!';
+      showToast();
+      document.getElementById('contact-form').reset();
+      setTimeout(() => {
+        btn.textContent = 'ENVIAR MENSAGEM';
+        btn.disabled = false;
+      }, 3000);
+    }, 1200);
+  }
+
+  function showToast() {
+    const toast = document.getElementById('form-toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+  }
+
+  // ==================== NEWSLETTER ====================
+  function subscribeNewsletter() {
+    const email = document.getElementById('newsletter-email').value;
+    if (!email || !email.includes('@')) {
+      alert('Por favor insira um email válido.');
+      return;
+    }
+    document.getElementById('newsletter-email').value = '';
+    showToast();
+  }
+
+  // ==================== FORM FOCUS STYLES ====================
+  document.querySelectorAll('#contact-form input, #contact-form select, #contact-form textarea').forEach(input => {
+    input.addEventListener('focus', () => {
+      const label = input.parentElement.querySelector('label');
+      if (label) label.style.color = '#a53c00';
+    });
+    input.addEventListener('blur', () => {
+      const label = input.parentElement.querySelector('label');
+      if (label) label.style.color = '#010101';
+    });
+  });
+
+  // ==================== HERO HERO REVEAL ON LOAD ====================
+  window.addEventListener('load', () => {
+    const hero = document.getElementById('hero-content');
+    if (hero) hero.classList.add('visible');
+    updateNavLinks('home');
+    initReveal();
+  });
+
+  // ==================== KEYBOARD ESC CLOSES MOBILE MENU ====================
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+</script>
+</body>
+</html>

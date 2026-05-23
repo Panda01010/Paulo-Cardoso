@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>body {
+    background-color: #fbf9f8;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBr84w8tKcuS2U27t2Jm1afjZ5WGHxzcNE429dwQ3PA0PJYZRaOK-mS48MF7vNrxY5zCrfNR5qzmh3OzIU7mMSqxky3gsho3mTdpDaXV4xsmnZQU20Tsjf0ET5cb1uVvizgNPntMFfin679iOfUx2cAGsvmlEC15LnwGJta0H5GUa76yNu3aolS7H4N0Rzvr9yUhxmOJInEuYgfHOsZ7tUETPBQYhr-ujSWPh9ObLK8vedTvvq1SeFJ6gbNsBQ8rhtGydfyQel4itG6);
+    scroll-behavior: smooth
+    }
+.hard-shadow {
+    box-shadow: 6px 6px 0 0 rgba(1, 1, 1, 0.15)
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#1b1b1b",
+                        "primary": "#010101",
+                        "on-tertiary-fixed-variant": "#484643",
+                        "secondary-container": "#fe702c",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e4e2e2",
+                        "surface-dim": "#dbd9d9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#474746",
+                        "secondary": "#a53c00",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e6e2dd",
+                        "inverse-primary": "#c8c6c5",
+                        "background": "#fbf9f8",
+                        "tertiary": "#010101",
+                        "on-surface": "#1b1c1c",
+                        "outline": "#747878",
+                        "surface-container-low": "#f5f3f3",
+                        "primary-container": "#1c1c1c",
+                        "on-background": "#1b1c1c",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#ffb598",
+                        "outline-variant": "#c4c7c7",
+                        "secondary-fixed": "#ffdbce",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-tertiary-fixed": "#1d1b19",
+                        "on-primary-container": "#858484",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface": "#fbf9f8",
+                        "inverse-surface": "#303030",
+                        "surface-bright": "#fbf9f8",
+                        "on-tertiary-container": "#878480",
+                        "on-secondary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#7e2c00",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#eae8e7",
+                        "surface-tint": "#5f5e5e",
+                        "on-secondary-container": "#5d1e00",
+                        "tertiary-fixed-dim": "#cac6c1",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#efeded",
+                        "tertiary-container": "#1d1c19",
+                        "primary-fixed": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-md": "32px",
+                        "stack-lg": "48px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "stack-sm": "16px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-background">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-4 bg-background border-b-2 border-primary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="construction">construction</span>
+<span class="font-headline-md text-headline-md font-bold text-secondary">PC</span>
+</div>
+<nav class="hidden md:flex gap-gutter">
+<a class="font-label-md text-label-md text-on-background hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-md text-label-md text-secondary border-b-2 border-secondary translate-y-0.5 transition-all" href="#">Sobre Nós</a>
+<a class="font-label-md text-label-md text-on-background hover:text-secondary transition-colors duration-200" href="#">Serviços</a>
+<a class="font-label-md text-label-md text-on-background hover:text-secondary transition-colors duration-200" href="#">Portfólio</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-md text-label-md hover:bg-secondary transition-colors duration-200 uppercase tracking-wider">
+            Orçamento
+        </button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[530px] flex items-center justify-center overflow-hidden bg-primary px-margin-mobile md:px-margin-desktop">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="A cinematic, wide-angle shot of a modern architectural construction site at golden hour. The image features clean structural lines of concrete and steel beams under a warm, amber glow. This high-contrast scene emphasizes the rugged yet refined nature of professional construction, aligning with a sophisticated monochromatic palette and sharp architectural details. The lighting is dramatic, casting deep shadows that highlight the texture of raw materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbmhLMnezJEvGOmd394rV80Wud9vPQkUBinhlxe45uSJ8Iw2kZayR8-4Awk952HI3HU85hzJaRusM6rTp5AVtaqr95YqoUb4L0Sew1A9tiwzUyS0rbvPYsSSvjGuU29WD62WXt2uS8gGQYuidNlfTil7fVBLskoRasJYcnDldO0rxLLMuNr0iwgW4KGq0jN3Pr8Afp-3SjIOk2fkfur7Ojaut4dUYfY28XGCX7jIMvzG_UBpC8UpCoemmiPCFwykcrRBPBmUWeGhby"/>
+</div>
+<div class="relative z-10 text-center max-w-3xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-stack-sm drop-shadow-lg">Sobre a Pinta Constrói</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-xl mx-auto">Mais do que erguer paredes, construímos legados com precisão técnica e acabamentos de excelência.</p>
+</div>
+</section>
+<!-- Bio Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="border-2 border-primary p-2 hard-shadow bg-white">
+<img class="w-full aspect-square object-cover filter grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional portrait of Paulo Cardoso, a seasoned construction expert, in a minimalist studio setting. He wears professional work attire, conveying reliability and craftsmanship. The lighting is high-contrast and directional, highlighting his experienced features. The overall aesthetic is rugged yet modern, using a palette of deep charcoals and warm whites to suggest heritage and artisanal skill in the construction and painting industry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD17Js79o8AP1HPTtGbB0YAL1AE0NkUz4AozYD1coFTLZZRlUtGJnwa_Tf_xi6YYB9k6tgWAcMfLQv3Ky5LCFi1hmLBIc7-yykhJ91sJqJX-fFoYHVZSXQd4Q-WW5xV8gBmPr_s4a9jEYsBYKG1EjZEmtN7tWG3AXSOciEqfMAh6bloUU3wRVZe3Xb6QZo9xO44y1BK9lQ8LAdf-7qMo_3eeTuKR0MylyKgyKXz8SMUJPovPdY9nrdnzahuuajVPNXaRSTdmcslVigS"/>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">O Fundador</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Paulo Cardoso</h2>
+<div class="w-16 h-1 bg-secondary mb-stack-sm"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Com mais de 10 anos de experiência acumulada no coração da construção civil e pintura decorativa, Paulo Cardoso fundou a Pinta Constrói com uma visão clara: unir a robustez das estruturas modernas à delicadeza do acabamento artesanal.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    A sua jornada começou no canteiro de obras, onde aprendeu que a integridade de um edifício reside nos detalhes que ninguém vê, e o seu valor na estética que todos admiram. Hoje, lidera uma equipa que partilha este compromisso inabalável com a qualidade.
+                </p>
+</div>
+</section>
+<!-- Values Section (Value Cards) -->
+<section class="bg-surface-container-low py-stack-lg px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Os Nossos Pilares</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Value Card 1 -->
+<div class="bg-background border-2 border-primary p-stack-md hard-shadow hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="verified">verified</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Trabalho de Qualidade</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Utilizamos materiais de primeira linha e técnicas rigorosas para garantir durabilidade e perfeição estética em cada projeto.</p>
+</div>
+<!-- Value Card 2 -->
+<div class="bg-background border-2 border-primary p-stack-md hard-shadow hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="groups">groups</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Equipa Dedicada</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Profissionais especializados que tratam cada obra como se fosse a sua própria casa, com respeito e profissionalismo.</p>
+</div>
+<!-- Value Card 3 -->
+<div class="bg-background border-2 border-primary p-stack-md hard-shadow hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Clientes Satisfeitos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A nossa maior recompensa é a confiança renovada dos nossos clientes ao verem as suas expectativas superadas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+<!-- Vertical/Horizontal Line -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-outline-variant z-0"></div>
+<!-- Milestone 1 -->
+<div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-bold mb-stack-sm border-2 border-secondary">2014</div>
+<h4 class="font-label-md text-label-md text-secondary uppercase mb-2">O Início</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Primeiros projetos de pintura residencial em Lisboa.</p>
+</div>
+<!-- Milestone 2 -->
+<div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-bold mb-stack-sm">2018</div>
+<h4 class="font-label-md text-label-md text-secondary uppercase mb-2">Expansão</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Abertura de serviços para construção civil e renovações totais.</p>
+</div>
+<!-- Milestone 3 -->
+<div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center font-bold mb-stack-sm">2021</div>
+<h4 class="font-label-md text-label-md text-secondary uppercase mb-2">Consolidação</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Criação da marca Pinta Constrói e equipa técnica alargada.</p>
+</div>
+<!-- Milestone 4 -->
+<div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
+<div class="w-12 h-12 bg-secondary text-on-secondary flex items-center justify-center font-bold mb-stack-sm">Hoje</div>
+<h4 class="font-label-md text-label-md text-secondary uppercase mb-2">Futuro</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Referência nacional em reabilitação de alta gama.</p>
+</div>
+</div>
+</section>
+<!-- Work Photo Grid -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md text-center">Excelência em Detalhes</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter h-auto md:h-[500px]">
+<div class="md:col-span-2 relative overflow-hidden group border-2 border-primary">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide shot of a luxury interior renovation featuring pristine white plastered walls and polished concrete floors. The space is filled with bright, natural light from floor-to-ceiling windows, creating a modern, minimalist atmosphere. The precision of the paint finish and the structural integrity of the architectural lines reflect professional craftsmanship. The color palette consists of warm whites, subtle grays, and deep charcoal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9b_gFy9E9yJlOoHHyUun3JgGvi5fSV-Sw6LLIR_ybqgxvm6zRfp5a1t3aZVxVNu7_hhFo1Zr5MRtXimvW2rTm5FmZtSumcEwf_xD7ABgJiP9YxXqkM5sbM7zE3fCYG8bgOEkPYcnaooAXWRqiPfWfmC-dxn_lY51fzJYQakW7AM8muXghClae2u_3IcWec3fvx3u4s2Df5fnq52xRiFMrSI8oLlvByf0XTy7hkwlNFvrEUyvInCUV77bj6uJDuMeMKbK3JdIo3_TF"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-primary/80 to-transparent text-on-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-md text-label-md">Interiores Residenciais</span>
+</div>
+</div>
+<div class="grid grid-rows-2 gap-gutter h-full">
+<div class="relative overflow-hidden group border-2 border-primary">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up detail of a master painter at work, carefully applying a smooth finish to a textured wall. The image focuses on the tactile nature of the materials—plaster, paint, and high-quality brushes. The lighting is soft and professional, highlighting the artisanal precision. The color palette is dominated by neutral tones and warm whites, emphasizing the clean, expert execution typical of high-end painting firms." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2L_lzTccw7PqvdmHmv2oLwYEO-N2CAb9DuZqddRHwK2mxIJ861dmdqTgPRyOt9MEyruCLb3I0oztfLRFYMfduihAXeIEkuXUU4spEYZReNFbcIjp300e7rke35HNSwjR7VOYKB21LpYvWmChH4IdtWKFwVR9G7yD95PqzBhScsvYhgzd7JSSxPvVn1WQA24-FP5W7SvsLkNIXy8Pyax-oCSrKtJUKiC8FLelejJ7ADoGvaD9rgRlxbLaNriksloSGl1lK9o0r_OdB"/>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-primary/80 to-transparent text-on-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-md text-label-md">Pintura Técnica</span>
+</div>
+</div>
+<div class="relative overflow-hidden group border-2 border-primary">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An architectural exterior shot of a modern building facade featuring a mix of raw concrete and sleek metal finishes. The building stands tall against a clear blue sky, with sharp shadows creating a sense of depth and permanence. The image represents the structural mastery and refined aesthetic of the construction firm, utilizing a sophisticated palette of greys, charcoals, and clean whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA42XclUkqL1bUgxfmvtXNGBxMFlbJCiA4MHV5EuU3UIwP9Odfymvxg5IWAl9eLnR7o-JY_JbctxqP-Tuwv-IYDC4UldxT0q767tHfLU2gD-QWO0xKriRyjC7wKqJXamHQ1uleXXQdPsmbyo4gx-gvkO4TkOzhOkSTM9jFGgrjNPuiR-tHTJW7WNnHe-tXFlWc6yyYSIovCsDo7hOsj-qlew9ArtprB0H953Lh9J06o3YW_dw0UX7ROdesXS42vPUoSOZAfM1ebafzy"/>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-primary/80 to-transparent text-on-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="font-label-md text-label-md">Estruturas Modernas</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary py-stack-lg px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-stack-sm">Pronto para começar o seu projeto?</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-stack-md max-w-2xl mx-auto">Deixe a sua obra nas mãos de quem entende de construção e valoriza o detalhe.</p>
+<button class="bg-secondary text-on-secondary px-10 py-4 font-label-md text-label-md hover:bg-white hover:text-primary transition-all duration-300 uppercase tracking-widest hard-shadow">
+                Solicitar Orçamento Gratuito
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary border-t-4 border-secondary text-on-primary">
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm text-secondary">Pinta Constrói</span>
+<p class="font-body-md text-body-md text-surface-variant max-w-xs">Excelência em pintura e construção civil desde 2014. Transformamos espaços com precisão e alma.</p>
+<span class="font-label-sm text-label-sm text-surface-variant">© 2026 Pinta Constrói</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-stack-md w-full md:w-auto">
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-secondary uppercase mb-2">Navegação</span>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm text-secondary transition-colors" href="#">Sobre Nós</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Serviços</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-secondary uppercase mb-2">Projectos</span>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Residencial</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Comercial</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Portfólio</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-secondary uppercase mb-2">Contacto</span>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Email</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple parallax or interaction effects could go here
+        document.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+    </script>
+</body></html>
